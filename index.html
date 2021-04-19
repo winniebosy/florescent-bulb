@@ -11,11 +11,11 @@
      <main class="main"></main>
         <h1>Lights on and off using javascript</h1>
             <section class="content">
-                <img src="bulb.gif" alt="bulb">
+                <img id ="myBulb" src="bulbOff.jpg" alt="bulb">
             </section>
                   <section class="switch">
-                <button type="button" onclick="">ON</button>
-                <button type="button" onclick="">OFF</button>
+                <button type="button" onclick="light(1)">ON</button>
+                <button type="button" onclick="light(0)">OFF</button>
             </section>
 </main>
 <!-- main section end here -->
@@ -23,7 +23,16 @@
 
 <!-- js Scripting -->
   <script>
+      function light (on){
+          let bulb;
+          if (on==0){
+              bulb="bulbOff.jpg";
+          }else{
+              bulb="bulb.gif";
+          }
+       document.getElementById("myBulb").src=bulb;
 
+      }
   </script>
   <!-- js scripting ends here -->
 </body>
